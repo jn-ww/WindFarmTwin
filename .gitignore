@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+# Jupyter
+.ipynb_checkpoints/
+# CFD / mesh outputs
+*.foam
+*.vtu
+*.vtk
+*.dat
+# General
+.env

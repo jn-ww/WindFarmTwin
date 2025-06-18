@@ -1,0 +1,16 @@
+name: windfarm-twin
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - pyvista           # 3-D visualisation, reads VTK from OpenFOAM
+  - streamlit
+  - pip
+  - pip:
+      - openmeteo-py  # tiny helper for wind-data API (optional)
+
