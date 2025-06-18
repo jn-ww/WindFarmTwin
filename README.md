@@ -17,3 +17,9 @@ This project combines
 - Week 5: Docs, tests, CI, deploy
 - Week 6: Polish & write blog post
 
+## TODO (Week 1)
+
+- [x] Project skeleton & env file
+- [ ] Fetch sample wind-speed dataset
+- [ ] EDA notebook
+- [ ] Request computing resources / account on Triton etc
