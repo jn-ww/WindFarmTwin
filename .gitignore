@@ -10,3 +10,7 @@ __pycache__/
 *.dat
 # General
 .env
+
+# Keep large NetCDF climate files out of Git
+data/raw/*.nc
+*.nc
