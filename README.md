@@ -20,9 +20,9 @@ This project combines
 ## TODO (Week 1)
 
 - [x] Project skeleton & env file
-- [ ] Fetch sample wind-speed dataset (NREL WIND Toolkit covers US lat/lon only; use the ERA5 script for other regions.)
-- [ ] EDA notebook
-- [ ] Request computing resources / account on Triton etc
+- [x] Fetch sample wind-speed dataset (NREL WIND Toolkit covers US lat/lon only; use the ERA5 script for other regions.)
+- [x] EDA notebook
+- [ ] Request computing resources
 
 
 
