@@ -22,7 +22,8 @@ This project combines
 - [x] Project skeleton & env file
 - [x] Fetch sample wind-speed dataset (NREL WIND Toolkit covers US lat/lon only; use the ERA5 script for other regions.)
 - [x] EDA notebook
-- [ ] Request computing resources
+- [x] Local debug CFD case converged
+- [x] Requested computing resources on Triton
 
 
 
