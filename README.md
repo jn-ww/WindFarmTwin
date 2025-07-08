@@ -1,29 +1,45 @@
-# WindFarmTwin 🌬️⚡
-
-**Light-weight digital twin for wind-farm layout & yaw optimisation**
+# Light-weight digital twin for wind-farm layout & yaw optimisation
 
 This project combines  
-* 🌀 CFD (OpenFOAM) to generate high-fidelity wake-loss data  
-* 🤖 Machine-learning surrogates for 100× faster layout what-ifs  
-* 📊 Streamlit dashboard so planners can tweak turbine spacing, yaw and instantly see power output & wake contours
+* 🌀 **CFD** (OpenFOAM) — generates high-fidelity wake-loss data  
+* 🤖 **ML surrogates** — 100 × faster “what-if” layout sweeps  
+* 📊 **Streamlit dashboard** — planners drag spacing / yaw sliders and instantly see power & wake contours
 
-> **Status:** Week 1 — repo skeleton & environment. Follow our [Roadmap](#roadmap).
+> **Status:** Week 2 — cloud VM online, first OpenFOAM test run next.
 
-## Roadmap
-- **Week 1:** Repo skeleton, Conda env, fetch first open wind dataset
-- Week 2: Run two baseline OpenFOAM cases (on Triton?)
-- Week 3: Train & validate surrogate model
-- Week 4: Build Streamlit UI
-- Week 5: Docs, tests, CI, deploy
-- Week 6: Polish & write blog post
+---
 
-## TODO (Week 1)
+## Roadmap (July → Aug 2025)
 
-- [x] Project skeleton & env file
-- [x] Fetch sample wind-speed dataset (NREL WIND Toolkit covers US lat/lon only; use the ERA5 script for other regions.)
-- [x] EDA notebook
-- [x] Local debug CFD case converged
-- [x] Requested computing resources on Triton
+| Week | Goal | Progress |
+|------|------|----------|
+| **W 1** | repo + Conda env · ERA5 sample · local debug case | ✅ done |
+| **W 2** | ─ request Triton access<br>─ spin-up GCP spot VM<br>─ run *one* baseCase on 16 vCPU | ▶ Triton request **sent**<br>▶ **VM created** (`wf-twin`, e2-standard-16) |
+| **W 3** | 9-case yaw × spacing sweep on GCP · post-process to `cfd_results.csv` | ☐ |
+| **W 4** | train & validate first surrogate (model = Random Forest / small MLP) | ☐ |
+| **W 5** | build Streamlit UI (sliders + wake plot) · add unit tests & CI | ☐ |
+| **W 6** | polish docs · write Medium/GitHub blog post | ☐ |
 
+---
 
+## TODO (this sprint)
+
+- [x] Repo skeleton & env file  
+- [x] ERA5 downloader + EDA notebook  
+- [x] Local debug CFD case converged  
+- [x] Triton visitor request sent  
+- [x] Google Cloud trial activated, 16-core VM up  
+- [ ] Install OpenFOAM on VM (`apt install openfoam10`)  
+- [ ] Run single baseCase on VM  
+- [ ] Duplicate 9 yaw/spacing cases (`clone_9cases.sh`)  
+- [ ] Push `cfd_results.csv` and update Readme
+
+---
+
+### Usage (coming soon)
+
+```bash
+conda env create -f environment.yml
+conda activate windfarm-twin
+streamlit run app.py      # placeholder dashboard
 
