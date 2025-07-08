@@ -29,8 +29,8 @@ This project combines
 - [x] Local debug CFD case converged  
 - [x] Triton visitor request sent  
 - [x] Google Cloud trial activated, 16-core VM up  
-- [ ] Install OpenFOAM on VM (`apt install openfoam10`)  
-- [ ] Run single baseCase on VM  
+- [x] Install OpenFOAM on VM (`apt install openfoam10`)  
+- [x] Run single baseCase on VM  
 - [ ] Duplicate 9 yaw/spacing cases (`clone_9cases.sh`)  
 - [ ] Push `cfd_results.csv` and update Readme
 
